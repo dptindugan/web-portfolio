@@ -2,18 +2,36 @@ import React, { useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import "react-bulma-components/dist/react-bulma-components.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import { Body, ProjectCarousel } from "./components/Body";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { HeroFooter, LandingFooter } from "./components/Footer";
+import { About, AboutLanding } from "./components/About";
+import { Contact, ContactFooter } from "./components/Contact";
 import Skills from "./components/Skill";
 
 // import { Hero } from "react-bulma-components";
 
 function App() {
   const [componentToShow, setComponentToShow] = useState("landing");
+  const [landingComponent, setLandingComponent] = useState("profile");
+
+  const projectsTabHandler = () => {
+    setLandingComponent("projects");
+  };
+
+  const aboutTabHandler = () => {
+    setLandingComponent("about");
+  };
+
+  const profileTabHandler = () => {
+    setLandingComponent("profile");
+  };
+
+  const contactTabHandler = () => {
+    setLandingComponent("contact");
+  };
 
   const landingClickHandler = () => {
     setComponentToShow("landing");
@@ -32,15 +50,71 @@ function App() {
   };
 
   if (componentToShow === "landing") {
-    return (
-      <div className="App">
-        <Header project={projectsClickHandler} />
-        <Skills />
-        <Body />
-        <Contact />
-        <Footer />
-      </div>
-    );
+    if (landingComponent === "profile") {
+      return (
+        <div className="App">
+          <Header
+            project={projectsClickHandler}
+            aboutTab={aboutTabHandler}
+            projectsTab={projectsTabHandler}
+            contactTab={contactTabHandler}
+            profileTab={profileTabHandler}
+          />
+          <Skills />
+          <Body />
+          <AboutLanding />
+          <LandingFooter />
+        </div>
+      );
+    } else if (landingComponent === "about") {
+      return (
+        <div className="App">
+          <About
+            project={projectsClickHandler}
+            aboutTab={aboutTabHandler}
+            projectsTab={projectsTabHandler}
+            contactTab={contactTabHandler}
+            profileTab={profileTabHandler}
+          />
+          <Skills />
+          <Body />
+          <AboutLanding />
+          <LandingFooter />
+        </div>
+      );
+    } else if (landingComponent === "projects") {
+      return (
+        <div>
+          <ProjectCarousel
+            project={projectsClickHandler}
+            aboutTab={aboutTabHandler}
+            projectsTab={projectsTabHandler}
+            contactTab={contactTabHandler}
+            profileTab={profileTabHandler}
+          />
+          <Skills />
+          <Body />
+          <AboutLanding />
+          <LandingFooter />
+        </div>
+      );
+    } else if (landingComponent === "contact") {
+      return (
+        <div>
+          <Contact
+            project={projectsClickHandler}
+            aboutTab={aboutTabHandler}
+            projectsTab={projectsTabHandler}
+            contactTab={contactTabHandler}
+            profileTab={profileTabHandler}
+          />
+          <Skills />
+          <Body />
+          <AboutLanding />
+          <LandingFooter />
+        </div>
+      );
+    }
   } else if (componentToShow === "projects") {
     return (
       <div>
@@ -51,7 +125,7 @@ function App() {
           contact={contactClickHandler}
         />
         <Body />
-        <Footer />
+        <HeroFooter />
       </div>
     );
   } else if (componentToShow === "contact") {
@@ -64,7 +138,7 @@ function App() {
           contact={contactClickHandler}
         />
         <Contact />
-        <Footer />
+        <HeroFooter />
       </div>
     );
   } else if (componentToShow === "about") {
@@ -77,7 +151,7 @@ function App() {
           contact={contactClickHandler}
         />
         <About />
-        <Footer />
+        <HeroFooter />
       </div>
     );
   }

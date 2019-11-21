@@ -29,9 +29,10 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
-i {
+.icons i {
   color: white;
   position: absolute;
   top: 50%;
@@ -41,3 +42,27 @@ i {
 
 /*http://matheusalves.net/#services
 https://ianlunn.co.uk/*/
+/*.skillSet {
+  margin-right: 77px;
+}*/
+
+.logos {
+  height: 120px;
+  width: 120px;
+}
+
+.technologies {
+  margin: 0 auto;
+}
+
+.technologies div {
+  margin-top: 20px;
+}
+
+.blue {
+  color: #2f23e8;
+}
+
+.lightblue {
+  color: #4fa4ff;
+}
