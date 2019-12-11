@@ -57,12 +57,6 @@ const HeroFooter = props => {
 				</Tabs.Tab>
 				<Tabs.Tab
 					active={visible && about ? true : false}
-					onClick={projectsTabHandler}
-				>
-					Projects
-				</Tabs.Tab>
-				<Tabs.Tab
-					active={visible && about ? true : false}
 					onClick={aboutTabHandler}
 				>
 					About
@@ -115,9 +109,7 @@ const LandingFooter = () => {
 				<Columns.Column className="has-text-centered">
 					<ContactFooter />
 				</Columns.Column>
-				<Columns.Column className="has-text-centered">
-					<p>asdfsadf</p>
-				</Columns.Column>
+				<Columns.Column className="has-text-centered"></Columns.Column>
 			</Columns>
 		</Footer>
 	);

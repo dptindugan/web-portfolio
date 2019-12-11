@@ -4,7 +4,8 @@ import {
 	Heading,
 	Section,
 	Columns,
-	Hero
+	Hero,
+	Button
 } from "react-bulma-components";
 import { HeroFooter } from "./Footer";
 
@@ -23,6 +24,13 @@ const About = props => {
 						mobile product design, web development, branding and
 						illustration
 					</Heading>
+					<Button
+						renderAs="a"
+						href="https://docs.google.com/document/d/1ZKUTKJ6jWwPlDci7Fh1KKFpbOe2jaS-pC7N4ioGDOs0/edit"
+						target="_blank"
+					>
+						Download Resume
+					</Button>
 				</Container>
 			</Hero.Body>
 			<HeroFooter
