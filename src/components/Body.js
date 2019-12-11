@@ -37,7 +37,10 @@ const Body = () => {
 								</Content>
 							</Card.Content>
 							<Card.Footer>
-								<Card.Footer.Item renderAs="a" href="#Yes">
+								<Card.Footer.Item
+									renderAs="a"
+									href="https://dptindugan.gitlab.io/mind-palace "
+								>
 									View
 								</Card.Footer.Item>
 							</Card.Footer>
@@ -59,7 +62,10 @@ const Body = () => {
 								</Content>
 							</Card.Content>
 							<Card.Footer>
-								<Card.Footer.Item renderAs="a" href="#Yes">
+								<Card.Footer.Item
+									renderAs="a"
+									href="https://seierherre-industries.herokuapp.com/"
+								>
 									View
 								</Card.Footer.Item>
 							</Card.Footer>
@@ -80,7 +86,10 @@ const Body = () => {
 								</Content>
 							</Card.Content>
 							<Card.Footer>
-								<Card.Footer.Item renderAs="a" href="#Yes">
+								<Card.Footer.Item
+									renderAs="a"
+									href="https://glacial-garden-53824.herokuapp.com/"
+								>
 									View
 								</Card.Footer.Item>
 							</Card.Footer>
