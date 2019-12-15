@@ -15,20 +15,23 @@ import { HeroFooter } from "./Footer";
 
 const Body = () => {
 	return (
-		<Section medium className="has-text-centered" id="portfolio">
-			<Heading>Porfolio</Heading>
-			<Heading renderAs="h2" subtitle className="has-text-grey">
-				Here is some of my work
-			</Heading>
-
+		<Hero.Body className="has-text-centered">
 			<Container>
+				<Heading size={2} color="light">
+					Porfolio
+				</Heading>
+				<Heading renderAs="h2" subtitle className="has-text-grey-light">
+					Here is some of my work
+				</Heading>
 				<Columns>
 					<Columns.Column>
 						<Card>
-							<Card.Image size="4by3" src="..." alt="...">
-								imsadf
-							</Card.Image>
-							<Card.Content>
+							<Card.Image
+								size="4by3"
+								src="/images/mindpalace.png"
+								alt="..."
+							></Card.Image>
+							<Card.Content className="myCard">
 								<Content>
 									<p className="has-text-grey">
 										A static website built with CSS3, HTML,
@@ -39,6 +42,7 @@ const Body = () => {
 							<Card.Footer>
 								<Card.Footer.Item
 									renderAs="a"
+									target="_blank"
 									href="https://dptindugan.gitlab.io/mind-palace "
 								>
 									View
@@ -48,10 +52,12 @@ const Body = () => {
 					</Columns.Column>
 					<Columns.Column>
 						<Card>
-							<Card.Image size="4by3" src="..." alt="...">
-								imsadf
-							</Card.Image>
-							<Card.Content>
+							<Card.Image
+								size="4by3"
+								src="/images/Seierherre_Industries.png"
+								alt="..."
+							></Card.Image>
+							<Card.Content className="myCard">
 								<Content>
 									<p className="has-text-grey">
 										An asset management web application with
@@ -64,6 +70,7 @@ const Body = () => {
 							<Card.Footer>
 								<Card.Footer.Item
 									renderAs="a"
+									target="_blank"
 									href="https://seierherre-industries.herokuapp.com/"
 								>
 									View
@@ -73,10 +80,14 @@ const Body = () => {
 					</Columns.Column>
 					<Columns.Column>
 						<Card>
-							<Card.Image size="4by3" src="..." alt="...">
+							<Card.Image
+								size="4by3"
+								src="/images/cp3-1.png"
+								alt="..."
+							>
 								imsadf
 							</Card.Image>
-							<Card.Content>
+							<Card.Content className="myCard">
 								<Content>
 									<p className="has-text-grey">
 										A booking management web application
@@ -88,6 +99,7 @@ const Body = () => {
 							<Card.Footer>
 								<Card.Footer.Item
 									renderAs="a"
+									target="_blank"
 									href="https://glacial-garden-53824.herokuapp.com/"
 								>
 									View
@@ -97,7 +109,7 @@ const Body = () => {
 					</Columns.Column>
 				</Columns>
 			</Container>
-		</Section>
+		</Hero.Body>
 	);
 };
 

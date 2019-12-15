@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .heading-text {
-  font-family: "Monserrat", sans-serif;
+  font-family: "Saira Semi Condensed", sans-serif;
+  /*font-family: "Monserrat", sans-serif;*/
   text-align: center;
 }
 
@@ -15,10 +16,26 @@
   height: 100%;
 }
 
+.landgingProfileImg {
+  position: relative;
+}
+
 #img-round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /*clip-path: circle(40% at 50% 45%);*/
+}
+
+#img-about {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   /*clip-path: circle(40% at 50% 45%);*/
 }
@@ -46,9 +63,15 @@ https://ianlunn.co.uk/*/
   margin-right: 77px;
 }*/
 
+.columns .column .myCard {
+  height: 140px;
+}
+
 .logos {
-  height: 120px;
-  width: 120px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
 }
 
 .technologies {
@@ -65,4 +88,116 @@ https://ianlunn.co.uk/*/
 
 .lightblue {
   color: #4fa4ff;
+}
+
+.landing-bg {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(70, 70, 70, 0.69),
+      rgba(40, 40, 40, 0.77),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/images/landing-bg3.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.whatIdo {
+  width: 10em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.landing-bg .myName {
+  color: white;
+}
+.landing-bg .whatIdo {
+  color: lightgray;
+}
+
+#btnLink {
+  text-decoration: none;
+}
+
+.about-bg {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(70, 70, 70, 0.89),
+      rgba(135, 135, 135, 0.85),
+      rgba(100, 100, 100, 0.98)
+    ),
+    url("/images/landing-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.about-bg #about-p {
+  padding: 20px;
+  background: linear-gradient(
+    rgba(70, 70, 70, 0.89),
+    rgba(60, 60, 60, 0.78),
+    rgba(50, 50, 50, 0.67)
+  );
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+html,
+body {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(70, 70, 70, 0.89),
+      rgba(135, 135, 135, 0.85),
+      rgba(100, 100, 100, 0.98)
+    ),
+    url("/images/landing-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.myNavbarContainer #myNavbar {
+  background-color: rgba(0, 0, 0, 0);
+}
+.myNavbarContainer #myNavbar a {
+  color: white;
+}
+
+.myNavbarContainer #myNavbar a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #img-round {
+    display: none;
+  }
 }

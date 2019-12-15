@@ -1,16 +1,57 @@
 import React from "react";
-import { Navbar, Box } from "react-bulma-components";
-const Nav = props => {
+import { Navbar, Box, Tabs, Hero, Columns } from "react-bulma-components";
+import { Link } from "react-router-dom";
+const NavBar = props => {
 	return (
+		<Hero.Footer className="myNavbarContainer">
+			<Tabs
+				type="boxed"
+				fullwidth={true}
+				align="centered"
+				color="transparent"
+				id="myNavbar"
+			>
+				<ul>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+
+					<li>
+						<Link to="/about">About</Link>
+					</li>
+
+					<li>
+						<Link to="/projects">Projects</Link>
+					</li>
+
+					<li>
+						<Link to="/contact">Contact</Link>
+					</li>
+				</ul>
+			</Tabs>
+
+			{/*<Columns>
+							<Columns.Column>
+								<Link>Home</Link>
+							</Columns.Column>
+							<Columns.Column>
+								<Link>Home</Link>
+							</Columns.Column>
+							<Columns.Column>
+								<Link>Home</Link>
+							</Columns.Column>
+							<Columns.Column>
+								<Link>Home</Link>
+							</Columns.Column>
+						</Columns>*/}
+		</Hero.Footer>
+	);
+
+	/*
 		<Navbar color="primary" active={false} transparent={false}>
 			<Navbar.Brand>
 				<Navbar.Item renderAs="a" onClick={props.home}>
-					<img
-						src="https://bulma.io/images/bulma-logo.png"
-						alt="Bulma: a modern CSS framework based on Flexbox"
-						width="112"
-						height="28"
-					/>
+					Home
 				</Navbar.Item>
 				<Navbar.Burger />
 			</Navbar.Brand>
@@ -33,7 +74,7 @@ const Nav = props => {
 				</Navbar.Container>
 			</Navbar.Menu>
 		</Navbar>
-	);
+	*/
 };
 
-export default Nav;
+export default NavBar;
