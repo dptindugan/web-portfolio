@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Box, Tabs, Hero, Columns } from "react-bulma-components";
+import { Tabs, Hero } from "react-bulma-components";
 import { Link } from "react-router-dom";
 const NavBar = props => {
 	return (
@@ -29,21 +29,6 @@ const NavBar = props => {
 					</li>
 				</ul>
 			</Tabs>
-
-			{/*<Columns>
-							<Columns.Column>
-								<Link>Home</Link>
-							</Columns.Column>
-							<Columns.Column>
-								<Link>Home</Link>
-							</Columns.Column>
-							<Columns.Column>
-								<Link>Home</Link>
-							</Columns.Column>
-							<Columns.Column>
-								<Link>Home</Link>
-							</Columns.Column>
-						</Columns>*/}
 		</Hero.Footer>
 	);
 

@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
-import { Body, ProjectCarousel } from "./components/Body";
-import Navbar from "./components/Navbar";
+import { Body } from "./components/Body";
+import NavBar from "./components/Navbar";
 import { Hero } from "react-bulma-components";
-import { HeroFooter, LandingFooter } from "./components/Footer";
-import { About, AboutLanding } from "./components/About";
-import { Contact, ContactFooter } from "./components/Contact";
-import Skills from "./components/Skill";
+import { AboutLanding } from "./components/About";
+import { Contact } from "./components/Contact";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { NavBar } from "./components/Navbar";
+// import { NavBar } from "./components/Navbar";
 
 // import { Hero } from "react-bulma-components";
 
@@ -20,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Hero size="fullheight">
-        <Navbar />
+        <NavBar />
         <Switch>
           <Route exact path="/" component={Header} />
           <Route exact path="/about" component={AboutLanding} />

@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import {
-	Hero,
-	Container,
-	Heading,
-	Button,
-	Image,
-	Columns
-} from "react-bulma-components";
-import { HeroFooter } from "./Footer";
+import React from "react";
+import { Hero, Container, Heading, Columns } from "react-bulma-components";
+// import { HeroFooter } from "./Footer";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 // import ParticlesContainer from "./ParticlesContainer";
@@ -40,7 +33,11 @@ const Header = props => {
 						</Link>
 					</Columns.Column>
 					<Columns.Column className="landgingProfileImg">
-						<img id="img-round" src="/images/profileImg.jpg" />
+						<img
+							id="img-round"
+							src="/images/profileImg.jpg"
+							alt="..."
+						/>
 					</Columns.Column>
 				</Columns>
 			</Container>

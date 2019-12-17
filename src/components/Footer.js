@@ -4,66 +4,66 @@ import { ContactFooter } from "./Contact";
 
 const HeroFooter = props => {
 	console.log(props);
-	const [visible, setVisible] = useState(false);
-	const [about, setAbout] = useState(false);
-	const [projects, setProjects] = useState(false);
-	const [contact, setContact] = useState(false);
-	const [profile, setProfile] = useState(false);
-	const profileTabHandler = () => {
-		setVisible(true);
-		setAbout(false);
-		setProjects(false);
-		setContact(false);
-		setProfile(true);
-		props.profileTab();
-	};
+	// const [visible, setVisible] = useState(false);
+	// const [about, setAbout] = useState(false);
+	// const [projects, setProjects] = useState(false);
+	// const [contact, setContact] = useState(false);
+	// // const [profile, setProfile] = useState(false);
+	// const profileTabHandler = () => {
+	// 	setVisible(true);
+	// 	setAbout(false);
+	// 	setProjects(false);
+	// 	setContact(false);
+	// 	setProfile(true);
+	// 	props.profileTab();
+	// };
 
-	const projectsTabHandler = () => {
-		setVisible(true);
-		setAbout(false);
-		setProjects(true);
-		setContact(false);
-		setProfile(false);
-		props.projectsTab();
-	};
+	// const projectsTabHandler = () => {
+	// 	setVisible(true);
+	// 	setAbout(false);
+	// 	setProjects(true);
+	// 	setContact(false);
+	// 	setProfile(false);
+	// 	props.projectsTab();
+	// };
 
-	const contactTabHandler = () => {
-		setVisible(true);
-		setAbout(false);
-		setProjects(false);
-		setContact(true);
-		setProfile(false);
+	// const contactTabHandler = () => {
+	// 	setVisible(true);
+	// 	setAbout(false);
+	// 	setProjects(false);
+	// 	setContact(true);
+	// 	setProfile(false);
 
-		props.contactTab();
-	};
+	// 	props.contactTab();
+	// };
 
-	const aboutTabHandler = () => {
-		setVisible(true);
-		setAbout(true);
-		setProjects(false);
-		setContact(false);
-		setProfile(false);
+	// const aboutTabHandler = () => {
+	// 	setVisible(true);
+	// 	setAbout(true);
+	// 	setProjects(false);
+	// 	setContact(false);
+	// 	setProfile(false);
 
-		props.aboutTab();
-	};
+	// 	props.aboutTab();
+	// };
 	return (
 		<Hero.Footer>
 			<Tabs fullwidth={true} className="is-boxed">
 				<Tabs.Tab
-					active={visible && about ? true : false}
-					onClick={profileTabHandler}
+				// active={visible && about ? true : false}
+				// onClick={profileTabHandler}
 				>
 					Profile
 				</Tabs.Tab>
 				<Tabs.Tab
-					active={visible && about ? true : false}
-					onClick={aboutTabHandler}
+				// active={visible && about ? true : false}
+				// onClick={aboutTabHandler}
 				>
 					About
 				</Tabs.Tab>
 				<Tabs.Tab
-					active={visible && about ? true : false}
-					onClick={contactTabHandler}
+				// active={visible && about ? true : false}
+				// onClick={contactTabHandler}
 				>
 					Contact
 				</Tabs.Tab>
